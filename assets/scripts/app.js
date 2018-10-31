@@ -28,7 +28,7 @@ $(() => {
     }
   })
 
-  $('.inner').on('click', function () {
-
-  })
+  // $('.inner').on('click', function () {
+  //
+  // })
 })
