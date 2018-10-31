@@ -7,7 +7,28 @@
 // require('./example')
 
 $(() => {
-  $('.inner').on('click', function() {
+  const playerOne = 'x'
+  const playerTwo = 'o'
+
+  let currentTurn = 1
+  let movesMade = 0
+
+  const box = $('.box')
+
+  box.on('click', function () {
+    movesMade++
+    if (currentTurn === 1) {
+      event.target.innerHTML = playerOne
+      event.target.style.color = 'red'
+      currentTurn++
+    } else {
+      event.target.innerHTML = playerTwo
+      event.target.style.color = 'blue'
+      currentTurn--
+    }
+  })
+
+  $('.inner').on('click', function () {
 
   })
 })
