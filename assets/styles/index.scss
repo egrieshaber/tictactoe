@@ -48,3 +48,16 @@
 .box:hover {
   background-color: black;
 }
+
+.winner {
+  display: none;
+  padding: 10px;
+  font-size: 32px;
+  color: royalblue;
+}
+
+.reset {
+  padding: 10px;
+  margin: 10px;
+  background-color: red;
+}
