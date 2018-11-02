@@ -7,6 +7,7 @@
 // require('./example')
 
 $(() => {
+  // const target = document.getElementsByClassName('box')
   const playerOne = 'x'
   const playerTwo = 'o'
 
@@ -16,25 +17,35 @@ $(() => {
   const box = $('.box')
   const winnerContainer = $('.winner')
   const reset = $('.reset')
-
-  box.on('click', function () {
-    movesMade++
-    if (currentTurn % 2 === 1) {
-      event.target.innerHTML = playerOne
-      event.target.style.color = 'red'
-      currentTurn++
-    } else {
-      event.target.innerHTML = playerTwo
-      event.target.style.color = 'blue'
-      currentTurn--
+  // const target = $(event.target)
+    box.on('click', function () {
+      movesMade++
+      console.log(event.target.innerHTML)
+      if (event.target.innerHTML === '') {
+      // if event.target.text('')
+      // finding odd numbers
+      if (currentTurn % 2 === 1) {
+        event.target.innerHTML = playerOne
+        event.target.style.color = 'red'
+        currentTurn++
+      } else {
+        event.target.innerHTML = playerTwo
+        event.target.style.color = 'blue'
+        currentTurn--
+      }
     }
-    if (checkForWinner()) {
-      const theWinner = currentTurn === 1 ? playerTwo : playerOne
-      declareWinner(theWinner)
-    }
-  })
 
-  reset.on('click', function (e) {
+      if (checkForWinner()) {
+        // if current move is equal to 1, player two wins, else player one wins
+        const theWinner = currentTurn === 1 ? playerTwo : playerOne
+        declareWinner(theWinner)
+      }
+    })
+  // } // else {
+
+  //  }
+
+  reset.on('click', function () {
     const moves = Array.prototype.slice.call($('.inner'))
     moves.map((m) => {
       m.innerHTML = ''
@@ -86,4 +97,5 @@ $(() => {
   // $('.inner').on('click', function () {
   //
   // })
+  // && (target.innerHTML === playerOne || playerTwo))
 })

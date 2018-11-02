@@ -47,17 +47,25 @@
 
 .box:hover {
   background-color: black;
+  cursor: crosshair;
 }
 
 .winner {
   display: none;
   padding: 10px;
   font-size: 32px;
-  color: royalblue;
+  color: tomato;
+  text-align: center;
 }
 
 .reset {
-  padding: 10px;
-  margin: 10px;
-  background-color: red;
+  padding: 20px;
+  margin: 20px;
+  background-color: tomato;
+  border-radius: 25px 50px;
+  color: white;
+}
+
+.reset:hover {
+  background-color: black;
 }
