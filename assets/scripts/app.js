@@ -5,8 +5,15 @@
 
 // use require without a reference to ensure a file is bundled
 // require('./example')
+const authEvents = require('./auth/events.js')
+const events = require('./events')
 
 $(() => {
+  $('#sign-up').on('submit', authEvents.onSignUp)
+  $('#sign-in').on('submit', authEvents.onSignIn)
+  $('#sign-out').on('submit', authEvents.onSignOut)
+  $('#sign-out').on('submit', authEvents.onSignOut)
+  $('#create-game').on('click', events.onCreateGameClick)
   // const target = document.getElementsByClassName('box')
   const playerOne = 'x'
   const playerTwo = 'o'
@@ -17,11 +24,24 @@ $(() => {
   const box = $('.box')
   const winnerContainer = $('.winner')
   const reset = $('.reset')
+
+  // const Game = function (id, cells, over, player_x, player_o) {
+  //   this.id
+  //   this.cells
+  //   this.over
+  //   this.player_x
+  //   this.player_o
+  // }
+  // const Player = function (id, email) {
+  //   this.id
+  //   this.email
+  // }
+  // const theresTheWinner = false
   // const target = $(event.target)
-    box.on('click', function () {
-      movesMade++
-      console.log(event.target.innerHTML)
-      if (event.target.innerHTML === '') {
+  box.on('click', function (event) {
+    movesMade++
+    // console.log(event.target.innerHTML)
+    if (event.target.innerHTML === '') {
       // if event.target.text('')
       // finding odd numbers
       if (currentTurn % 2 === 1) {
@@ -35,12 +55,12 @@ $(() => {
       }
     }
 
-      if (checkForWinner()) {
-        // if current move is equal to 1, player two wins, else player one wins
-        const theWinner = currentTurn === 1 ? playerTwo : playerOne
-        declareWinner(theWinner)
-      }
-    })
+    if (checkForWinner()) {
+      // if current move is equal to 1, player two wins, else player one wins
+      const theWinner = currentTurn === 1 ? playerTwo : playerOne
+      declareWinner(theWinner)
+    }
+  })
   // } // else {
 
   //  }

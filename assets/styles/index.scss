@@ -10,7 +10,8 @@
   max-width: 60vh;
   height: 80vw;
   max-height: 60vh;
-  font-size: 1rem;
+  font-size: 5rem;
+  background-color: rgba(0, 0, 255, 0.5);
 }
 
 .row {
@@ -68,4 +69,9 @@
 
 .reset:hover {
   background-color: black;
+}
+
+#message {
+  font-size: 50px;
+  color: tomato;
 }
