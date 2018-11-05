@@ -1,11 +1,16 @@
-# #!/bin/bash
+# sh curl-scripts/json/sign-up.sh
 
-curl --include --request POST 'https://tic-tac-toe-wdi.herokuapp.com/sign-up' \
+# don't use a password you use for any real websites!
+curl "https://tic-tac-toe-wdi.herokuapp.com/sign-out" \
+  --include \
+  --request POST \
   --header "Content-Type: application/json" \
   --data '{
     "credentials": {
-      "email": "blob@example.email",
-      "password": "an example password",
-      "password_confirmation": "an example password"
+      "email": "'"${EMAIL}"'",
+      "password": "'"${PASSWORD}"'",
+      "password_confirmation": "'"${PASSWORD}"'"
     }
   }'
+
+echo

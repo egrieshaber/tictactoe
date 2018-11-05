@@ -59,6 +59,14 @@
   text-align: center;
 }
 
+.score {
+  display: none;
+  padding: 10px;
+  font-size: 32px;
+  color: tomato;
+  text-align: center;
+}
+
 .reset {
   padding: 20px;
   margin: 20px;
@@ -71,7 +79,29 @@
   background-color: black;
 }
 
+.hidden {
+  display: none;
+}
+
 #message {
-  font-size: 50px;
+  font-size: 20px;
   color: tomato;
+}
+
+.logButton {
+  position: absolute;
+  left: 60px;
+  right: 0;
+  bottom: 10;
+  top: 100px;
+  // align-items: center;
+  // justify-content: center;
+}
+
+.create-game {
+  padding: 20px;
+  margin: 20px;
+  background-color: tomato;
+  // border-radius: 25px 50px;
+  color: white;
 }

@@ -1,3 +1,5 @@
+'use strict'
+
 const store = require('../store.js')
 
 const signUpSuccess = data => {
@@ -30,9 +32,9 @@ const signInFailure = error => {
 }
 
 const signOutSuccess = data => {
-  store.user = data.user
-  $('#message').text('Signed out seccessfully!')
   store.user = null
+  $('.grid').addClass('hidden')
+  $('#message').text('Signed out seccessfully!')
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('signOutSuccess ran.  Data is :', data)
@@ -44,11 +46,29 @@ const signOutFailure = error => {
   $('#message').addClass('failure')
   console.error('signOutFailure ran.  Error is :', error)
 }
+
+const createGameSuccess = data => {
+  store.game = data.game
+  $('.grid').removeClass('hidden')
+  $('.grid > div > div > div').each(function () {
+    $(this).text('')
+  })
+  console.log('createGameSuccess ran.  Data is :', data)
+}
+
+const createGameFailure = error => {
+  $('#message').text('Error on create game')
+  $('#message').removeClass()
+  $('#message').addClass('failure')
+  console.error('createGameFailure ran.  Error is :', error)
+}
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
   signInFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  createGameSuccess,
+  createGameFailure
 }

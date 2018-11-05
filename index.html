@@ -16,56 +16,121 @@
         <h1 class="header">tic tac toe</h1>
         <div class='flex-container flex-center'>
           <center><button class='reset'>Reset</button></center>
+          <button class='create-game'>New Game</button>
           <div class='winner'></div>
         </div>
 
+        <div class='flex-container flex-center'>
+          <div class='score'></div>
+        </div>
+
+        <!-- MODAL SECTION -->
+
+        <!-- SIGN IN MODAL -->
+
+        <div class='logButton'>
+        <button type="button" class="btn btn-primary" data-toggle="modal"
+      data-target="#exampleModal"> Log In / Out!</button>
+    </div>
+
+      <div class="modal fade" id="exampleModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">it's tic tac toe time</h5>
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <form id="sign-up" class="border">
+                <fieldset>
+                  <legend>Sign Up!</legend>
+                  <input type="text" name="credentials[email]" placeholder="Email" />
+                  <input type="password" name="credentials[password]" placeholder="Password" />
+                  <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" />
+                  <input type="submit" value="Sign Up!" />
+                </fieldset>
+              </form>
+
+              <form id="sign-in" class="border">
+                <fieldset>
+                  <legend>Sign In!</legend>
+                  <input type="text" name="credentials[email]" placeholder="Email" />
+                  <input type="password" name="credentials[password]" placeholder="Password" />
+                  <input type="submit" value="Sign In!" />
+                </fieldset>
+              </form>
+
+              <form id="sign-out" class="border">
+                <fieldset>
+                  <legend>Sign Out!</legend>
+                  <input type="submit" value="Sign Out!" />
+                </fieldset>
+              </form>
+
+              <p id="message"></p>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+              <button type="button" class="btn btn-primary">SAVE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIGN OUT MODAL -->
+      <!-- <button type="button" class="btn btn-primary" data-toggle="modal"
+      data-target="#exampleModal"> Log Out!</button>
+
+      <div class="modal fade" id="exampleModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">tic tac toe another day ...</h5>
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body">
+
+              <form id="sign-out" class="border">
+                <fieldset>
+                  <legend>Sign Out!</legend>
+                  <input type="submit" value="Sign Out!" />
+                </fieldset>
+              </form>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+              <button type="button" class="btn btn-primary">SAVE</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- GRID -->
 
 
-      <div class="grid">
+      <div class="grid hidden">
           <div class="row">
-            <div id= "b1" class="box"><div class="inner"></div></div>
-            <div id= "b2" class="box"><div class="inner"></div></div>
-            <div id= "b3" class="box"><div class="inner"></div></div>
+            <div id="1" class="box"><div class="inner"></div></div>
+            <div id="2" class="box"><div class="inner"></div></div>
+            <div id="3" class="box"><div class="inner"></div></div>
             </div>
           <div class="row">
-            <div id= "b4" class="box"><div class="inner"></div></div>
-            <div id= "b5" class="box"><div class="inner"></div></div>
-            <div id= "b6"class="box"><div class="inner"></div></div>
+            <div id="4" class="box"><div class="inner"></div></div>
+            <div id="5" class="box"><div class="inner"></div></div>
+            <div id="6"class="box"><div class="inner"></div></div>
           </div>
           <div class="row">
-            <div id= "b7" class="box"><div class="inner"></div></div>
-            <div id= "b8" class="box"><div class="inner"></div></div>
-            <div id= "b9" class="box"><div class="inner"></div></div>
+            <div id="7" class="box"><div class="inner"></div></div>
+            <div id="8" class="box"><div class="inner"></div></div>
+            <div id="9" class="box"><div class="inner"></div></div>
           </div>
         </div>
 
-        <p id="message"></p>
 
-        <form id="sign-up" class="border">
-        <fieldset>
-          <legend>Sign Up!</legend>
-          <input type="text" name="credentials[email]" placeholder="Email" />
-          <input type="password" name="credentials[password]" placeholder="Password" />
-          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" />
-          <input type="submit" value="Sign Up!" />
-        </fieldset>
-      </form>
 
-      <form id="sign-in" class="border">
-        <fieldset>
-          <legend>Sign In!</legend>
-          <input type="text" name="credentials[email]" placeholder="Email" />
-          <input type="password" name="credentials[password]" placeholder="Password" />
-          <input type="submit" value="Sign In!" />
-        </fieldset>
-      </form>
 
-      <form id="sign-out" class="border">
-        <fieldset>
-          <legend>Sign Out!</legend>
-          <input type="submit" value="Sign Out!" />
-        </fieldset>
-      </form>
 
     </body>
 </html>
