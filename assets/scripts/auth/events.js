@@ -61,6 +61,7 @@ const box = $('.box')
 const winnerContainer = $('.winner')
 const reset = $('.reset')
 const scoreContainer = $('.score')
+const tieContainer = $('.tie')
 const data = {}
 const onMakeMove = event => {
   const target = $(event.target)
@@ -98,6 +99,8 @@ const onMakeMove = event => {
     playerOne = ''
     playerTwo = ''
     declareScore(scoreX + scoreO)
+  } else if (movesMade === 9) {
+    declareTie()
   }
 
   data.over = gameOver
@@ -117,6 +120,8 @@ reset.on('click', function (event) {
   })
   winnerContainer.html('')
   winnerContainer.css('display', 'none')
+  tieContainer.html('')
+  tieContainer.css('display', 'none')
   currentTurn = 1
   movesMade = 0
 })
@@ -162,6 +167,12 @@ function declareWinner (winner) {
 function declareScore (score) {
   scoreContainer.css('display', 'block')
   scoreContainer.html('X Wins: ' + scoreX + ' | ' + 'O Wins: ' + scoreO)
+}
+
+function declareTie (tie) {
+  tieContainer.css('display', 'block')
+  reset.css('display', 'block')
+  tieContainer.html("It's a tie!")
 }
 
 module.exports = {

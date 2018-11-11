@@ -18,7 +18,7 @@ const signUpFailure = error => {
 
 const signInSuccess = data => {
   store.user = data.user
-  $('#message').text('Signed in seccessfully!')
+  $('#message').text('Signed in Succesfuly!')
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('signInSuccess ran.  Data is :', data)
@@ -34,7 +34,7 @@ const signInFailure = error => {
 const signOutSuccess = data => {
   store.user = null
   $('.grid').addClass('hidden')
-  $('#message').text('Signed out seccessfully!')
+  $('#message').text('Signed out Succesfuly!')
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('signOutSuccess ran.  Data is :', data)
