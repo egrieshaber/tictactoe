@@ -50,14 +50,14 @@ const makeMove = data => {
       Authorization: 'Token token=' + store.user.token
     },
     data: {
-      "game": {
-        "cell": {
-          "index": data.index,
-          "value": data.value,
+      'game': {
+        'cell': {
+          'index': data.index,
+          'value': data.value
         },
-        "over": data.over
+        'over': data.over
       }
-}
+    }
   })
 }
 
