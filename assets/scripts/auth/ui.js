@@ -6,7 +6,10 @@ const signUpSuccess = data => {
   $('#message').text('Sign up Succesful!')
   $('#message').removeClass()
   $('#message').addClass('success')
-  console.log('signUpSuccess ran.  Data is :', data)
+  // console.log('signUpSuccess ran.  Data is :', data)
+  $('#password').val('')
+  $('#password2').val('')
+  $('#email').val('')
 }
 
 const signUpFailure = error => {
@@ -21,7 +24,9 @@ const signInSuccess = data => {
   $('#message').text('Signed in Succesfuly!')
   $('#message').removeClass()
   $('#message').addClass('success')
-  console.log('signInSuccess ran.  Data is :', data)
+  // console.log('signInSuccess ran.  Data is :', data)
+  $('#password3').val('')
+  $('#email2').val('')
 }
 
 const signInFailure = error => {
@@ -37,7 +42,9 @@ const signOutSuccess = data => {
   $('#message').text('Signed out Succesfuly!')
   $('#message').removeClass()
   $('#message').addClass('success')
-  console.log('signOutSuccess ran.  Data is :', data)
+  // console.log('signOutSuccess ran.  Data is :', data)
+  $('#password').val('')
+  $('#email').val('')
 }
 
 const signOutFailure = error => {
@@ -53,7 +60,7 @@ const createGameSuccess = data => {
   $('.grid > div > div > div').each(function () {
     $(this).text('')
   })
-  console.log('createGameSuccess ran.  Data is :', data)
+  // console.log('createGameSuccess ran.  Data is :', data)
 }
 
 const createGameFailure = error => {
