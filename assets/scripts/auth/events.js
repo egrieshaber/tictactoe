@@ -57,7 +57,7 @@ const onCreateGame = event => {
     .catch(ui.createGameFailure)
 }
 
-const box = $('.box')
+// const box = $('.box')
 const winnerContainer = $('.winner')
 const reset = $('.reset')
 const scoreContainer = $('.score')
@@ -68,7 +68,7 @@ const onMakeMove = event => {
   const index = parseInt(target.attr('id'))
   data.index = index
   movesMade++
-  console.log(event.target.innerHTML)
+  // console.log(event.target.innerHTML)
   if (event.target.innerHTML === '') {
     // if event.target.text('')
     // finding odd numbers
