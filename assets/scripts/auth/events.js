@@ -79,7 +79,7 @@ const onMakeMove = event => {
       currentTurn++
     } else {
       event.target.innerHTML = playerTwo
-      event.target.style.color = 'blue'
+      event.target.style.color = 'black'
       data.value = playerTwo
       currentTurn--
     }
