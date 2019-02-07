@@ -1,7 +1,12 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Major+Mono+Display');
 
 .header {
   text-align: center;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .grid {
@@ -11,7 +16,7 @@
   height: 80vw;
   max-height: 60vh;
   font-size: 5rem;
-  background-color: rgba(0, 0, 255, 0.5);
+  background-color: rgba(255, 209, 209, 0.8);
 }
 
 .row {
@@ -19,7 +24,7 @@
 }
 
 .box {
-  background: tomato;
+  background: rgba(255, 0, 0, 0.5);
   margin: 5px;
   color: white;
   font-weight: bold;
@@ -47,7 +52,7 @@
 }
 
 .box:hover {
-  background-color: black;
+  background-color: rgba(255, 209, 209, 0.8);
   cursor: crosshair;
 }
 
@@ -55,7 +60,7 @@
   display: none;
   padding: 10px;
   font-size: 32px;
-  color: tomato;
+  color: rgba(255, 0, 0, 0.5);
   text-align: center;
 }
 
@@ -63,7 +68,7 @@
   display: none;
   padding: 10px;
   font-size: 32px;
-  color: tomato;
+  color: rgba(255, 0, 0, 0.5);
   text-align: center;
 }
 
@@ -71,14 +76,14 @@
   display: none;
   padding: 10px;
   font-size: 32px;
-  color: tomato;
+  color: rgba(255, 0, 0, 0.5);
   text-align: center;
 }
 
 .reset {
   padding: 20px;
   margin: 20px;
-  background-color: tomato;
+  background-color: rgba(255, 0, 0, 0.5);
   border-radius: 25px 50px;
   color: white;
 }
@@ -93,7 +98,7 @@
 
 #message {
   font-size: 20px;
-  color: tomato;
+  color: rgba(255, 0, 0, 0.5);
 }
 
 .logButton {
@@ -106,10 +111,14 @@
   // justify-content: center;
 }
 
+.btn {
+  background-color: rgba(255, 209, 209, 0.8);
+}
+
 .create-game {
   padding: 20px;
   margin: 20px;
-  background-color: tomato;
+  background-color: rgba(255, 0, 0, 0.5);
   // border-radius: 25px 50px;
   color: white;
 }
